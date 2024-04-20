@@ -42,8 +42,18 @@ const scrollActive = () => {
 window.addEventListener('scroll', scrollActive);
 
 
+//scroll reveal animation
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    reset: true
+});
 
-
+sr.reveal(`.home__data, .products__data, .about__data, .testimonial__data`, { opacity: 0 });
+sr.reveal(`.home__img, .testimonial__img, .about__img`, { scale: 0.1 });
+sr.reveal(`.products__card, .steps__card, .footer__container`, { interval: 200 });
 
 
 
